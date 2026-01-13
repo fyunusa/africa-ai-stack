@@ -44,14 +44,23 @@ function About() {
   ]
   
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden min-h-screen bg-gradient-to-b from-slate-900 via-purple-900 to-slate-900">
       {/* Animated Background Gradient */}
       <div 
         className="fixed inset-0 opacity-20 pointer-events-none"
         style={{
-          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(59, 130, 246, 0.3), transparent 50%)`
+          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(139, 92, 246, 0.4), transparent 50%)`
         }}
       />
+      
+      {/* Grid Background */}
+      <div className="fixed inset-0 opacity-10 pointer-events-none">
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'linear-gradient(rgba(139, 92, 246, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.3) 1px, transparent 1px)',
+          backgroundSize: '50px 50px',
+          animation: 'grid-flow 20s linear infinite'
+        }} />
+      </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative">
         {/* Hero Section with 3D Effect */}
@@ -59,12 +68,12 @@ function About() {
           <div className="inline-block mb-6">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-primary-600 to-blue-600 blur-3xl opacity-30 animate-pulse"></div>
-              <h1 className="text-6xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary-900 via-blue-900 to-primary-900 mb-4 relative slide-up-animation tracking-tight">
-                Africa AI Stack
+              <h1 className="text-6xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 mb-4 relative slide-up-animation tracking-tight" style={{ fontFamily: 'monospace' }}>
+                AFRICA AI STACK
               </h1>
             </div>
           </div>
-          <p className="text-2xl text-primary-600 max-w-3xl mx-auto slide-up-animation font-light" style={{ animationDelay: '0.2s' }}>
+          <p className="text-2xl text-purple-200 max-w-3xl mx-auto slide-up-animation font-light" style={{ animationDelay: '0.2s' }}>
             Documenting and celebrating the AI revolution happening across Africa
           </p>
           
@@ -94,22 +103,22 @@ function About() {
           <div className="absolute -left-20 top-20 w-72 h-72 bg-gradient-to-br from-blue-400/20 to-purple-600/20 rounded-full blur-3xl"></div>
           <div className="absolute -right-20 bottom-20 w-72 h-72 bg-gradient-to-br from-emerald-400/20 to-blue-600/20 rounded-full blur-3xl"></div>
           
-          <div className="relative glassmorphism rounded-3xl p-12 border-2 border-primary-200 shadow-2xl overflow-hidden group">
+          <div className="relative glassmorphism rounded-3xl p-12 border-2 border-purple-500 shadow-2xl overflow-hidden group bg-slate-800/90">
             <div className="absolute inset-0 bg-gradient-to-br from-primary-50/50 to-blue-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <div className="relative z-10">
-              <h2 className="text-4xl font-bold text-primary-900 mb-6 flex items-center">
-                <span className="w-2 h-12 bg-gradient-to-b from-primary-600 to-blue-600 mr-4 rounded-full"></span>
+              <h2 className="text-4xl font-bold text-purple-100 mb-6 flex items-center">
+                <span className="w-2 h-12 bg-gradient-to-b from-purple-600 to-pink-600 mr-4 rounded-full"></span>
                 Our Mission
               </h2>
-              <div className="space-y-6 text-lg text-primary-700 leading-relaxed">
-                <p className="relative pl-6 border-l-4 border-primary-300 hover:border-primary-600 transition-colors">
-                  Africa AI Stack was born from a simple question: <span className="font-semibold text-primary-900">What is Africa actually building in AI?</span> When our CEO traveled from South Korea to Africa to understand the AI ecosystem, he discovered a vibrant but undocumented landscape of innovation.
+              <div className="space-y-6 text-lg text-purple-200 leading-relaxed">
+                <p className="relative pl-6 border-l-4 border-purple-400 hover:border-purple-500 transition-colors">
+                  Africa AI Stack was born from a simple question: <span className="font-semibold text-purple-100">What is Africa actually building in AI?</span> When our CEO traveled from South Korea to Africa to understand the AI ecosystem, he discovered a vibrant but undocumented landscape of innovation.
                 </p>
-                <p className="relative pl-6 border-l-4 border-blue-300 hover:border-blue-600 transition-colors">
+                <p className="relative pl-6 border-l-4 border-pink-400 hover:border-pink-500 transition-colors">
                   We're building a living directory that tracks not just the successes, but also the struggles and failures. Every project tells a story—whether it's thriving, seeking support, or has shut down—and these stories collectively paint a picture of Africa's AI journey.
                 </p>
-                <p className="relative pl-6 border-l-4 border-emerald-300 hover:border-emerald-600 transition-colors">
-                  This isn't just a database. It's a <span className="font-semibold text-primary-900">knowledge base</span> for founders, investors, researchers, and anyone interested in understanding the real state of AI development in Africa.
+                <p className="relative pl-6 border-l-4 border-cyan-400 hover:border-cyan-500 transition-colors">
+                  This isn't just a database. It's a <span className="font-semibold text-cyan-300">knowledge base</span> for founders, investors, researchers, and anyone interested in understanding the real state of AI development in Africa.
                 </p>
               </div>
             </div>
@@ -118,7 +127,7 @@ function About() {
         
         {/* What We Track - Hexagon Grid */}
         <div className="mb-24">
-          <h2 className="text-4xl font-bold text-center text-primary-900 mb-16">What We Track</h2>
+          <h2 className="text-4xl font-bold text-center text-purple-100 mb-16">What We Track</h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {[
               { icon: '🚀', title: 'Active Projects', desc: 'Startups and initiatives building AI solutions across healthcare, agriculture, education, and more. We track their funding, team size, and health status.', color: 'from-blue-500 to-indigo-600' },
@@ -132,12 +141,12 @@ function About() {
                 onMouseEnter={() => setActiveSection(i)}
               >
                 <div className="absolute inset-0 bg-gradient-to-r opacity-0 group-hover:opacity-10 blur-2xl transition-opacity" style={{ background: `linear-gradient(135deg, ${item.color})` }}></div>
-                <div className="relative bg-white/80 backdrop-blur-xl rounded-2xl p-8 border-2 border-primary-200 hover:border-primary-400 transition-all hover:scale-105 hover:shadow-2xl">
+                <div className="relative bg-slate-800/90 backdrop-blur-xl rounded-2xl p-8 border-2 border-purple-500/50 hover:border-purple-400 transition-all hover:scale-105 hover:shadow-2xl">
                   <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center text-3xl mb-4 group-hover:rotate-12 transition-transform shadow-lg`}>
                     {item.icon}
                   </div>
-                  <h3 className="text-2xl font-bold text-primary-900 mb-3">{item.title}</h3>
-                  <p className="text-primary-700 leading-relaxed">{item.desc}</p>
+                  <h3 className="text-2xl font-bold text-purple-100 mb-3">{item.title}</h3>
+                  <p className="text-purple-300 leading-relaxed">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -146,7 +155,7 @@ function About() {
         
         {/* Status Guide - Interactive Cards */}
         <div className="mb-24">
-          <h2 className="text-4xl font-bold text-center text-primary-900 mb-16">Project Status Guide</h2>
+          <h2 className="text-4xl font-bold text-center text-purple-100 mb-16">Project Status Guide</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {statusItems.map((item, i) => (
               <div
@@ -162,14 +171,14 @@ function About() {
                 <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-20 blur-2xl transition-all duration-500 rounded-3xl`}></div>
                 
                 {/* Card */}
-                <div className="relative h-full bg-white/90 backdrop-blur-xl rounded-2xl p-6 border-2 border-primary-200 group-hover:border-primary-400 transition-all group-hover:scale-105 group-hover:-rotate-1 shadow-lg">
+                <div className="relative h-full bg-slate-800/90 backdrop-blur-xl rounded-2xl p-6 border-2 border-purple-500/50 group-hover:border-purple-400 transition-all group-hover:scale-105 group-hover:-rotate-1 shadow-lg">
                   <div className="text-center mb-4">
                     <div className={`inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br ${item.gradient} text-4xl mb-3 group-hover:scale-110 transition-transform shadow-xl`}>
                       {item.icon}
                     </div>
-                    <h3 className="text-2xl font-bold text-primary-900">{item.status}</h3>
+                    <h3 className="text-2xl font-bold text-purple-100">{item.status}</h3>
                   </div>
-                  <p className="text-sm text-primary-700 leading-relaxed text-center">
+                  <p className="text-sm text-purple-300 leading-relaxed text-center">
                     {item.description}
                   </p>
                 </div>
@@ -181,16 +190,16 @@ function About() {
         {/* Get Involved - Futuristic CTA */}
         <div className="relative mb-12">
           <div className="absolute inset-0 bg-gradient-to-r from-primary-600 via-blue-600 to-purple-600 rounded-3xl blur-2xl opacity-20"></div>
-          <div className="relative glassmorphism rounded-3xl p-12 border-2 border-primary-300 shadow-2xl overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-blue-400/10 to-purple-600/10 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-emerald-400/10 to-blue-600/10 rounded-full blur-3xl"></div>
+          <div className="relative glassmorphism rounded-3xl p-12 border-2 border-purple-500 shadow-2xl overflow-hidden bg-slate-800/90">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-cyan-600/20 to-blue-600/20 rounded-full blur-3xl"></div>
             
             <div className="relative text-center">
               <div className="inline-block mb-6">
                 <div className="text-6xl mb-4 animate-pulse">🚀</div>
-                <h2 className="text-4xl font-bold text-primary-900 mb-4">Get Involved</h2>
+                <h2 className="text-4xl font-bold text-purple-100 mb-4">Get Involved</h2>
               </div>
-              <p className="text-xl text-primary-700 mb-8 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl text-purple-200 mb-8 max-w-3xl mx-auto leading-relaxed">
                 Know a project we should track? Working on something yourself? Have corrections or updates? We're community-driven and welcome contributions.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-6">
@@ -218,12 +227,12 @@ function About() {
         
         {/* Contact - Floating */}
         <div className="text-center">
-          <div className="inline-block glassmorphism px-8 py-4 rounded-full border border-primary-300 hover:scale-105 transition-transform shadow-lg">
-            <p className="text-primary-700">
+          <div className="inline-block glassmorphism px-8 py-4 rounded-full border-2 border-purple-500 hover:scale-105 transition-transform shadow-lg bg-slate-800/80">
+            <p className="text-purple-200">
               Questions? Reach out at{' '}
               <a 
                 href="mailto:fyunusa.tech@gmail.com" 
-                className="text-primary-900 hover:text-blue-600 font-bold transition-colors inline-flex items-center"
+                className="text-purple-100 hover:text-cyan-400 font-bold transition-colors inline-flex items-center"
               >
                 fyunusa.tech@gmail.com
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
