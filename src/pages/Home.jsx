@@ -250,7 +250,7 @@ function Home() {
                   <div className="flex items-center justify-center space-x-3 mb-6">
                     <div className="h-px w-20 bg-gradient-to-r from-transparent to-purple-500"></div>
                     <span className="text-purple-300 text-sm font-mono px-3 py-1 bg-purple-900/30 border border-purple-500/30 rounded">
-                      AGENTIC ERA INTERFACE v2.0
+                      REAL-TIME CONTINENTAL AI TRACKER
                     </span>
                     <div className="h-px w-20 bg-gradient-to-l from-transparent to-purple-500"></div>
                   </div>
