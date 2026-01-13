@@ -88,13 +88,13 @@ function Layout({ children }) {
               </p>
             </div>
             <div className="flex space-x-6">
-              <a href="#" className="text-sm text-primary-600 hover:text-primary-900">
+              <a href="https://github.com/fyunusa/africa-ai-stack/issues/new" target="_blank" rel="noopener noreferrer" className="text-sm text-primary-600 hover:text-primary-900 transition-colors">
                 Submit Project
               </a>
-              <a href="#" className="text-sm text-primary-600 hover:text-primary-900">
+              <a href="https://github.com/fyunusa/africa-ai-stack" target="_blank" rel="noopener noreferrer" className="text-sm text-primary-600 hover:text-primary-900 transition-colors">
                 GitHub
               </a>
-              <a href="#" className="text-sm text-primary-600 hover:text-primary-900">
+              <a href="mailto:fyunusa.tech@gmail.com" className="text-sm text-primary-600 hover:text-primary-900 transition-colors">
                 Contact
               </a>
             </div>
